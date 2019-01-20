@@ -3,10 +3,8 @@
 .banner-home{
     min-height: 360px;
     min-width: 100%;
-    //margin-bottom: 120px;
     background-image: url('/assets/bg2.jpg');
     background-repeat: no-repeat;
-    //background-attachment: fixed;
     background-size: cover;
     background-position: center center;
     div{
@@ -14,9 +12,18 @@
     }
 }
 
-/* .banner-home div{
-    margin-top: 200px;
-} */
+.banner-default{
+  min-height: 200px;
+  min-width: 100%;
+  background-image: url('/assets/bg2.jpg');
+  background-repeat: no-repeat;
+  //background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  div{
+      margin-top:10px;         
+  }
+}
 
 .text-banner-home{
     font-family: 'Arvo', serif;    

@@ -1,0 +1,30 @@
+---
+layout: default
+---
+{%- include minutes-to-read.html -%}
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header text-right">
+        <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+        <p class="post-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}">
+                {% include date.html date=page.date %}
+            </time><br>
+            {%- if page.author -%}
+                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <span class="p-author h-card" itemprop="name">Por: {{ page.author | escape }}</span>
+                </span>
+            {%- endif -%}
+        </p>
+        <hr>
+        <span class="reading-time post-meta">{{ minutesText }}</span>
+    </header>
+    <div class="post-content e-content" itemprop="articleBody">
+        {{ content }}
+    </div>
+
+    {%- if site.disqus.shortname -%}
+        {%- include disqus_comments.html -%}
+    {%- endif -%}
+
+    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
