@@ -54,3 +54,36 @@ $on-large:         $on-laptop !default;
   "minima/layout",
   "minima/syntax-highlighting"
 ;
+
+.typewriter h3 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    opacity 5s,
+    typing 3.5s steps(30, end),
+    blink-caret .7s step-end infinite;
+}
+
+@keyframes typing {
+  0% { opacity: 0 }
+  20% { opacity: 1 }
+  100% { opacity: 1 }
+}
+
+/* The typing effect */
+@keyframes typing {
+  0% { width: 0% }
+  50% { width: 0% }
+  100% { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}

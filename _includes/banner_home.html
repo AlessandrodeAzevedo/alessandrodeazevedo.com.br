@@ -2,11 +2,16 @@
     <div class="container white-text pt-3 pt-md-5">
         <div class="row" style="position:absolute;">
             <div class="col-md-3">
-                <img src="/assets/eu.jpg" class="img-fluid rounded z-depth-3 d-none d-md-block">
+                <img src="/assets/eu.jpg" class="img-fluid rounded z-depth-3 d-none d-md-block animated bounceInDown delay-1s">
             </div>
             <div class="col-md-9">
-                <div class="text-banner-home">
-                    <p class="personal-profile__name">Alessandro de Azevedo_</p>
+                <div class="d-block w-100">
+                    <div class="typewriter float-left">
+                        <h3 class="personal-profile__name typewriter">{{ site.title }}</h3>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="text-banner-home animated lightSpeedIn delay-1s d-block">
                     <p class="personal-profile__work">Desenvolvedor: Front/Back/Mobile/<small>(Infra compiling ...)</small></p>
                     <div class="personal-profile__contacts">
                         <dl class="contact-list contact-list__opacity-titles">
@@ -22,7 +27,7 @@
                         <a href="{{ site.linkedin_profile }}" target="_blank" class="mr-1">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="{{ site.github_profile }}" target="_blank" class="mr-1">
+                        <a href="{{ site.github_profile }}" target="_blank" class="mx-1">
                             <i class="fab fa-github-square"></i>
                         </a>
                         <a href="{{ site.twitter_profile }}" target="_blank" class="mx-1">
@@ -40,4 +45,4 @@
         </div>
     </div>
 </div>
-<div class="d-none d-lg-block pt-4"></div>
+<div class="d-none d-lg-block pt-5"></div>
