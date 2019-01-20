@@ -152,6 +152,7 @@
    @include relative-font-size(0.9375);
    border: 1px solid $grey-color-light;
    border-radius: 3px;
+   background-color: white;
  }
  
  code {
@@ -166,6 +167,8 @@
      border: 0;
      padding-right: 0;
      padding-left: 0;
+     color:white;
+     background-color: transparent;
    }
  }
  
