@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i');
 
 .banner-home{
-    min-height: 53vh;
+    min-height: 360px;
     min-width: 100%;
+    //margin-bottom: 120px;
     background-image: url('/assets/bg2.jpg');
     background-repeat: no-repeat;
     //background-attachment: fixed;
     background-size: cover;
     background-position: center center;
+    div{
+        margin-top:10px;         
+    }
 }
 
 /* .banner-home div{
@@ -25,7 +29,7 @@
 }
 
 .personal-profile__name {
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 .contact-list dt {
@@ -33,7 +37,7 @@
 }
 
 .contact-list dd {
-    padding-left: 100px;
+    padding-left: 70px;
     margin-bottom: 15px;
 }
 
@@ -43,6 +47,14 @@
 
 nav.scrolling-navbar {
     background-color:rgba(17, 19, 41, 0.5);
+}
+
+
+footer.footer-color{
+    background-color:rgb(17, 19, 41);
+    .footer-copyrigh{
+        background-color:rgba(17, 19, 41, 1);
+    }
 }
 
 /**

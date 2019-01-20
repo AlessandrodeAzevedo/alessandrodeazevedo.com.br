@@ -1,39 +1,52 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-<div class="home container mt-5 py-4">
-    {%- if page.title -%}
-        <h1 class="page-heading">{{ page.title }}</h1>
-    {%- endif -%}
+  {%- include head.html -%}
 
-    {{ content }}
+  <body>
 
-    {%- if site.posts.size > 0 -%}
-        <h2 class="post-list-heading">{{ page.list_title | default: "Artigos" }}</h2>
+    {%- include header.html -%}
 
-        <div class="row">
-            {%- for post in site.posts -%}
-                <div class="col-4">
-                    <div class="card card-image" style='background-image: url("{{ post.image | default: "/assets/bg2.jpg" }}");'>
-                        <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
-                            <div>
-                                {%- comment -%} <h6 class="indigo-text">
-                                    <i class="fas fa-chart-pie"></i>
-                                    <strong> Marketing</strong>
-                                </h6> {%- endcomment -%}
-                                <h3 class="font-weight-bold">
-                                    <strong>
-                                        {{ post.title | escape }}
-                                    </strong>
-                                </h3>
-                                <p class="pb-3">{{ post.excerpt }}</p>
-                                <a href="{{ post.url | relative_url }}" class="btn btn-indigo btn-rounded btn-md waves-effect waves-light"><i class="fas fa-clone left"></i> Ver artigo</a>
+    {%- include banner_home.html -%}
+    
+    <div class="home container pb-4">
+        {%- if page.title -%}
+            <h1 class="page-heading">{{ page.title }}</h1>
+        {%- endif -%}
+
+        {{ content }}
+
+        {%- if site.posts.size > 0 -%}
+            <h2 class="post-list-heading">{{ page.list_title | default: "Artigos" }}</h2>
+            <div class="row">
+                {%- for post in site.posts -%}
+                    <div class="col-md-4">
+                        <div class="card card-image" style='background-image: url("{{ post.image | default: "/assets/bg2.jpg" }}");'>
+                            <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
+                                <div>
+                                    {%- comment -%} <h6 class="indigo-text">
+                                        <i class="fas fa-chart-pie"></i>
+                                        <strong> Marketing</strong>
+                                    </h6> {%- endcomment -%}
+                                    <h3 class="font-weight-bold">
+                                        <strong>
+                                            {{ post.title | escape }}
+                                        </strong>
+                                    </h3>
+                                    <p class="pb-3">{{ post.excerpt }}</p>
+                                    <a href="{{ post.url | relative_url }}" class="btn btn-indigo btn-rounded btn-md waves-effect waves-light"><i class="fas fa-clone left"></i> Ver artigo</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            {%- endfor -%}
-        </div>
-    {%- endif -%}
-</div>
+                {%- endfor -%}
+            </div>
+        {%- endif -%}
+    </div>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>
+
