@@ -1,0 +1,146 @@
+
+<div class='col-md-8 mx-auto'>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+            {%- for slide in page.slides -%}
+                <div class="mySlides">
+                    <div class="row w-100 m-0">
+                        <div class="col-12">
+                            <div class="caixa p-3">
+                                <img class="d-block" src="/assets/images/{{ page.title | slugify }}/{{ slide.url }}" style="max-height: 100%; max-width: 100%;"/>
+                            </div>
+                        </div>
+                        <div class="col-12 texto-slide d-flex align-items-center justify-content-center white-text">
+                            <q class="p-3 text-center">{{ slide.text }}</q>
+                        </div>
+                    </div>
+                </div>
+            {%- endfor -%}
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Dots/bullets/indicators -->
+    <div class="row">
+        <div class="col-12">
+            <div class="dot-container">
+                {%- for slide in page.slides -%}
+                    {% assign num = num | plus: 1 %}
+                    <span class="dot" onclick="currentSlide({{ num }})"></span>
+                {%- endfor -%}
+            </div> 
+        </div>
+    </div> 
+</div>
+
+<style>
+
+    .caixa {
+        height: 400px;
+        width: 100%;
+        margin-bottom:15px;
+
+        /* Centralizando imagens */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .texto-slide{
+        height: 100px;
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    .slideshow-container {
+        position: relative;
+        background-color: #ccc;
+    }
+   
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -30px;
+        padding: 16px;
+        color: #888;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+   
+    .next {
+        position: absolute;
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+   
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+        color: white;
+    }
+   
+    .dot-container {
+        text-align: center;
+        padding: 20px;
+        background: #ddd;
+    }
+   
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+   
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+   
+    q {
+        padding:30px;
+        font-style: italic;
+    }
+
+    .author {
+        color: cornflowerblue;
+    }
+
+</style>
+   
+<script>
+
+    var slideIndex = 1;
+
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "flex";
+        dots[slideIndex-1].className += " active";
+    }
+
+</script>
