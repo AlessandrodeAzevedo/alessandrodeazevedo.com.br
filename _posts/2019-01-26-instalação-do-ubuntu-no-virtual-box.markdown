@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Instalação do Ubuntu server 18.04 no Virtual box"
+title:  "Instalação do Ubuntu no Virtual box"
 date: 2019-01-18T00:00:00Z
 categories: jekyll update
-image: "https://img.freepik.com/free-vector/welcome-composition-with-flat-design_23-2147895653.jpg?size=338&ext=jpg"
+image: "ubuntu-background.jpg"
 author: Alessandro de Azevedo
 slides:
     - url: 1.png
@@ -87,36 +87,15 @@ slides:
     - url: 40.png
       text: Finalmente ubuntu instalado \o/, agora é só logar com o usuário e a senha que definimos na instalação
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
+Nesse passo a passo vou compartilhar a forma como eu instalo a versão 18.04 do ubuntu a partir do arquivo minimal disponibilizado pela Canonical de uma forma bem genérica para diversas aplicações
+
+Essas aplicações eu vou compartilhando sempre por aqui é só ficar ligado, mais vamos a instalação
+
+Primeiro vamos baixar a ISO diretamente do site do [Ubuntu](https://help.ubuntu.com/community/Installation/MinimalCD) de acordo com a arquitetura do seu hardware, 32 ou 64 bits
+
+Depois de baixado é só seguir os passos abaixo
 
 <div class="w-100 d-flex justify-content-center">
     {%- include slide.html -%}
 </div>
-<br>
-
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-```
-Teste 123
-```
-
-{% highlight php %}
-if(1==1){
-    echo "algo"
-}
-// prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-{% highlight shell %}
-git status
-{% endhighlight %}
-
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
