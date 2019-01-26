@@ -17,7 +17,7 @@ title: Alessandro de Azevedo
 email: alessandrodeazevedo@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Olá meu nome é Alessandro e criei esse site/blog para guardar e compartilhar as "receitas de código" que acabo criando no dia a dia.
-baseurl: "/blog-site" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://alessandrodeazevedo.com.br" # the base hostname & protocol for your site, e.g. http://example.com
 timezone: "America/Sao_Paulo"
 
@@ -28,7 +28,7 @@ instagram_profile: "https://www.instagram.com/alessandrodeazevedo"
 facebook_profile: "https://www.facebook.com/AlessandrodeAzevedo"
 
 permalink: /:title/
-paginate: 1
+paginate: 20
 paginate_path: "/blog/page/:num/"
 
 # Build settings
