@@ -10,7 +10,7 @@
                 <div class="row">
                     {%- for post in site.posts -%}
                         <div class="col-md-4">
-                            <div class="card card-image" style='background-image: url("/assets/images/{{ post.title | slugify }}/{{ post.image }}"); background-position: center;'>
+                            <div class="card card-image" style='background-image: url("{{ site.baseurl }}/assets/images/{{ post.title | slugify }}/{{ post.image }}"); background-position: center;'>
                                 <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
                                     <div>
                                         {%- comment -%} 
