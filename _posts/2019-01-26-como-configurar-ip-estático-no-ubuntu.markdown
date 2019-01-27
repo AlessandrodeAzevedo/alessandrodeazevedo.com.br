@@ -5,6 +5,7 @@ date: 2019-01-27T12:31:00Z
 categories: jekyll update
 image: "ip-a.png"
 author: Alessandro de Azevedo
+comments: true
 tags:
     - infra
     - ubuntu

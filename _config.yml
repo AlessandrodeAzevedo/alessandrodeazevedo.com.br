@@ -23,6 +23,7 @@ url: "http://alessandrodeazevedo.com.br" # the base hostname & protocol for your
 timezone: "America/Sao_Paulo"
 
 excerpt_separator: <!--more-->
+disqus_shortname: alessandrodeazevedo
 
 linkedin_profile: "https://www.linkedin.com/in/alessandroaz/"
 github_profile: "https://github.com/AlessandrodeAzevedo"
