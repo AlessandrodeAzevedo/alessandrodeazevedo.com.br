@@ -1,10 +1,15 @@
 ---
 layout: post
 title:  "Instalação do Ubuntu no Virtual box"
-date: 2019-01-18T00:00:00Z
+date: 2019-01-26T00:00:00Z
 categories: jekyll update
 image: "ubuntu-background.jpg"
 author: Alessandro de Azevedo
+tags:
+    - ubuntu
+    - infra
+    - virtual box
+    - linux
 slides:
     - url: 1.png
       text: Inicialmente iremos criar uma nova máquina virtual clicando no ícone acima
@@ -89,6 +94,8 @@ slides:
 ---
 
 Nesse passo a passo vou compartilhar a forma como eu instalo a versão 18.04 do ubuntu a partir do arquivo minimal disponibilizado pela Canonical de uma forma bem genérica para diversas aplicações
+
+<!--more-->
 
 Essas aplicações eu vou compartilhando sempre por aqui é só ficar ligado, mais vamos a instalação
 
