@@ -9,7 +9,7 @@ paginate_path: "/blog/page/:num/"
         <div class="row">
             {% for post in paginator.posts %}
                 <div class="col-md-4">
-                    <div class="card card-image" style='background-image: url("{{ post.image | default: "/assets/bg2.jpg" }}");'>
+                    <div class="card card-image" style='background-image: url("{{ site.baseurl }}/assets/images/{{ post.title | slugify }}/{{ post.image }}"); background-position: center;'>
                         <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
                             <div>
                                 {%- comment -%} <h6 class="indigo-text">
