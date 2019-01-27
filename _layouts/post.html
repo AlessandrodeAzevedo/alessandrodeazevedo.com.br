@@ -27,7 +27,7 @@ layout: default
                 <div class="clearfix">
                     <div class="comments">
                         {%- if jekyll.environment == "production" -%}
-                            {{ include disqus.html }}
+                            {%- include disqus.html -%}
                         {%- else -%}
                             <h4>Disqus comentários aqui!</h4>
                         {%- endif -%}
