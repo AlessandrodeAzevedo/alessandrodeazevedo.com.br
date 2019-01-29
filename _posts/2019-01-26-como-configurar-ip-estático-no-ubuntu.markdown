@@ -2,7 +2,7 @@
 layout: post
 title:  "Como configurar IP estático no Ubuntu"
 date: 2019-01-27T12:31:00Z
-categories: jekyll update
+categories: infra
 image: "ip-a.png"
 author: Alessandro de Azevedo
 comments: true

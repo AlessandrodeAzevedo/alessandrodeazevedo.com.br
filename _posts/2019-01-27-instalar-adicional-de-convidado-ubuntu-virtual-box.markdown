@@ -2,7 +2,7 @@
 layout: post
 title: "Instalar adicional de convidado Ubuntu Virtual box"
 date: 2019-01-27T12:31:00Z
-categories: jekyll update
+categories: infra
 image: "virtualbox.jpg"
 author: Alessandro de Azevedo
 comments: true

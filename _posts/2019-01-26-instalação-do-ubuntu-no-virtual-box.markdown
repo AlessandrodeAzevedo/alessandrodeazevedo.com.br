@@ -2,7 +2,7 @@
 layout: post
 title:  "Instalação do Ubuntu no Virtual box"
 date: 2019-01-26T00:00:00Z
-categories: jekyll update
+categories: infra
 image: "ubuntu-background.jpg"
 author: Alessandro de Azevedo
 comments: true
