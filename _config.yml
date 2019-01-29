@@ -33,6 +33,7 @@ instagram_profile: "https://www.instagram.com/alessandrodeazevedo"
 facebook_profile: "https://www.facebook.com/AlessandrodeAzevedo"
 
 permalink: /:title/
+limit_article_home: 3
 paginate: 20
 paginate_path: "/blog/page/:num/"
 

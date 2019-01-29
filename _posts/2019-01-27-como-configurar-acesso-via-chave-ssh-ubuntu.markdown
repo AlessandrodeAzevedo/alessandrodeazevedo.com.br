@@ -3,7 +3,7 @@ layout: post
 title: "Como configurar acesso via chave ssh ubuntu"
 date: 2019-01-27T23:31:00Z
 categories: infra
-image: "virtualbox.jpg"
+image: "ssh.jpg"
 author: Alessandro de Azevedo
 comments: true
 tags:
@@ -19,6 +19,8 @@ Para criar o acesso via ssh no servidor precisamos basicamente instalar o pacote
 ```
 $ sudo apt install openssh-server
 ```
+
+<!--more-->
 
 após instalar esse pacote provavelmente o acesso ssh já estará funcionando, para testar podemos testar o acesso fazendo a seguinte chamada de outra máquina da rede
 
