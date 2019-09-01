@@ -16,11 +16,11 @@ tags:
 
 Para criar o acesso via ssh no servidor precisamos basicamente instalar o pacote ssh
 
+<!--more-->
+
 ```
 $ sudo apt install openssh-server
 ```
-
-<!--more-->
 
 após instalar esse pacote provavelmente o acesso ssh já estará funcionando, para testar podemos testar o acesso fazendo a seguinte chamada de outra máquina da rede
 
