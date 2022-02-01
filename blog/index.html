@@ -3,32 +3,45 @@ layout: default
 paginate_path: "/blog/page/:num/"
 ---
 
-<div class="blog pb-4 pt-5 mt-5">
-    {%- if site.posts.size > 0 -%}
-        <h2 class="post-list-heading">{{ page.list_title | default: "Últimos artigos" }}</h2>
-        <div class="row">
-            {% for post in paginator.posts %}
-                <div class="col-md-4">
-                    <div class="card card-image" style='background-image: url("{{ site.baseurl }}/assets/images/{{ post.title | slugify }}/{{ post.image }}"); background-position: center;'>
-                        <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
-                            <div>
-                                {%- comment -%} <h6 class="indigo-text">
-                                    <i class="fas fa-chart-pie"></i>
-                                    <strong> Marketing</strong>
-                                </h6> {%- endcomment -%}
-                                <h3 class="font-weight-bold">
-                                    <strong>
-                                        {{ post.title | escape }}
-                                    </strong>
-                                </h3>
-                                <p class="pb-3">{{ post.excerpt }}</p>
-                                <a href="{{ post.url | relative_url }}" class="btn btn-primary btn-rounded btn-md waves-effect waves-light"><i class="fas fa-clone left"></i> Ver artigo</a>
-                            </div>
-                        </div>
-                    </div>
+{%- if site.posts.size > 0 -%}
+    <div class="row">
+        <div class="col-12">
+            <div class="art-section-title">
+                <div class="art-title-frame">
+                    <a href="/blog"><h3>Artigos</h3></a>
                 </div>
-            {%- endfor -%}
+            </div>
         </div>
-    {%- endif -%}
-</div>
+    </div>
+    <div class="row">
+        {% for post in paginator.posts %}
+        <div class="col-lg-6">
+            <!-- blog post card -->
+            <div class="art-a art-blog-card">
+            <!-- post cover -->
+            <a href="{{ post.url | relative_url }}" class="art-port-cover">
+                <!-- img -->
+                <img src="{{ site.baseurl }}/assets/images/{{ post.title | slugify }}/{{ post.image }}" alt="blog post">
+            </a>
+            <!-- post cover end -->
+            <!-- post description -->
+            <div class="art-post-description">
+                <!-- title -->
+                <a href="{{ post.url | relative_url }}">
+                <h5 class="mb-15">{{ post.title | escape }}</h5>
+                </a>
+                <!-- text -->
+                <div class="mb-15">{{ post.excerpt }}</div>
+                <!-- link -->
+                <a href="{{ post.url | relative_url }}" class="art-link art-color-link art-w-chevron">Ver artigo</a>
+            </div>
+            <!-- post description end -->
+            </div>
+            <!-- blog post card end -->
+
+        </div>
+        {%- endfor -%}
+    </div>
+{%- endif -%}
+
 {% include pagination.html %}

@@ -1,12 +1,124 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-  {%- include head.html -%}
-  <body>
-    {%- include header.html -%}
-    {%- include banner_default.html -%}
-    <div class="container">
-        {{ content }}
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
+{%- include head.html -%}
+
+<body>
+    <!-- app -->
+    <div class="art-app">
+
+        <!-- mobile top bar -->
+        <div class="art-mobile-top-bar"></div>
+
+        <!-- app wrapper -->
+        <div class="art-app-wrapper">
+
+            <!-- app container end -->
+            <div class="art-app-container">
+
+                {%- include profile.html -%}
+
+                <!-- content -->
+                <div class="art-content">
+
+                    <!-- curtain -->
+                    <div class="art-curtain"></div>
+
+                    <!-- top background -->
+                    <div class="art-top-bg" style="background-image: url(/assets/img/bg.jpeg);">
+                        <!-- overlay -->
+                        <div class="art-top-bg-overlay"></div>
+                        <!-- overlay end -->
+                    </div>
+                    <!-- top background end -->
+
+                    <!-- swup container -->
+                    <div class="transition-fade" id="swup">
+
+                        <!-- scroll frame -->
+                        <div id="scrollbar" class="art-scroll-frame">
+                            {%- include banner_default.html -%}
+                            <div class="container-fluid">
+                                <div class="art-a art-card articles-custom">
+                                    {{ content }}
+                                </div>
+                            </div>
+
+                            <!-- container -->
+                            <div class="container-fluid" style="margin-top: 30px;">
+                                <!-- row -->
+                                <div class="row">
+
+                                    <!-- col -->
+                                    <div class="col-6 col-lg-3">
+                                        <!-- brand -->
+                                        <img class="art-brand" src="/assets/img/linux.png" alt="brand" style="width: 150px; height: auto;">
+                                    </div>
+                                    <!-- col end -->
+
+                                    <!-- col -->
+                                    <div class="col-6 col-lg-3">
+                                        <!-- brand -->
+                                        <img class="art-brand" src="/assets/img/devops.png" alt="brand" style="width: 130px; height: auto;">
+                                    </div>
+                                    <!-- col end -->
+
+                                    <!-- col -->
+                                    <div class="col-6 col-lg-3">
+                                        <!-- brand -->
+                                        <img class="art-brand" src="/assets/img/php.png" alt="brand" style="width: 100px; height: auto;">
+                                    </div>
+                                    <!-- col end -->
+
+                                    <!-- col -->
+                                    <div class="col-6 col-lg-3">
+                                        <!-- brand -->
+                                        <img class="art-brand" src="/assets/img/vue.png" alt="brand" style="width: 80px; height: auto;">
+                                    </div>
+                                    <!-- col end -->
+
+                                </div>
+                                <!-- row end -->
+
+                            </div>
+                            <!-- container end -->
+
+                            <!-- container -->
+                            <div class="container-fluid">
+
+                                {%- include footer.html -%}
+
+                            </div>
+                            <!-- container end -->
+
+                        </div>
+                        <!-- scroll frame end -->
+
+                    </div>
+                    <!-- swup container end -->
+
+                </div>
+                <!-- content end -->
+                {% include menu.html %}
+            </div>
+            <!-- app container end -->
+
+        </div>
+        <!-- app wrapper end -->
+
+        <!-- preloader -->
+        <div class="art-preloader">
+            <div class="art-preloader-content">
+                <h4>Alessandro de Azevedo</h4>
+                <div id="preloader" class="art-preloader-load"></div>
+            </div>
+        </div>
+        <!-- preloader end -->
+
     </div>
-    {%- include footer.html -%}
-  </body>
+    <!-- app end -->
+
+    {% include scripts.html %}
+
+</body>
+
 </html>

@@ -1,0 +1,33 @@
+---
+---
+$mycolor: #FFC107; //Amarelo
+@import 'theme/style.scss';
+
+
+/* ----- CUSTOM ----- */
+.art-banner-overlay{
+    background-image: linear-gradient(90deg, rgba(45,45,58,.80) 15%, rgba(45,45,58,.3) 50%, rgba(43,43,53,.2) 100%) !important;
+    //background-image: white !important;
+}
+
+.articles-custom {
+    font-size: 13px;
+    color: #c1c1c1;
+}
+.articles-custom img{
+    max-width: 100%;
+}
+
+pre {
+    color: inherit;
+}
+code {
+    color: inherit;
+}
+
+.highlight pre {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #00000047 !important;
+}
+

@@ -34,15 +34,15 @@ pode ser que tenhamos que forçar essa remoção
 
 também precisamos instalar alguns pacotes requeridos
 
-```
+{% highlight bash %}
 $ sudo apt install build-essential module-assistant -y
-```
+{% endhighlight %}
 
 agora que instalamos o *module-assistant* vamos baixar os headers do kernel necessários com o comando
 
-```
+{% highlight bash %}
 $ sudo m-a prepare
-```
+{% endhighlight %}
 
 agora iremos inserir o adicional para convidados
 
@@ -50,30 +50,30 @@ agora iremos inserir o adicional para convidados
 
 geralmente somente inserir o disco não é o suficiente para monta-lo, para garantirmos a montagem vamos executar o seguinte comando
 
-```
+{% highlight bash %}
 $ sudo mount /dev/cdrom /mnt
-```
+{% endhighlight %}
 
 agora vamos copiar o script de instalação para a pasta */tmp* 
 
-```
+{% highlight bash %}
 $ sudo cp /mnt/VBoxLinuxAdditions.run /tmp
-```
+{% endhighlight %}
 
 damos permissão de execução para esse arquivo
 
-```
+{% highlight bash %}
 $ sudo chmod +x /tmp/VBoxLinuxAdditions.run
-```
+{% endhighlight %}
 
 e executamos o arquivo
 
-```
+{% highlight bash %}
 $ sudo /tmp/VBoxLinuxAdditions.run
-```
+{% endhighlight %}
 
 agora é só reiniciar e pronto!!
 
-```
+{% highlight bash %}
 $ sudo shutdown -r now
-```
+{% endhighlight %}
