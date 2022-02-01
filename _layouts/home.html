@@ -1,39 +1,570 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-    {%- include head.html -%}
-    <body>
-        {%- include header.html -%}
-        {%- include banner_home.html -%}
-        <div class="home container pb-4">
-            {%- if site.posts.size > 0 -%}
-                <h2 class="post-list-heading">{{ page.list_title | default: "Últimos artigos" }}</h2>
-                <div class="row">
-                    {%- for post in site.posts limit:site.limit_article_home -%}
-                        <div class="col-md-4 py-2">
-                            <div class="card card-image" style='background-image: url("{{ site.baseurl }}/assets/images/{{ post.title | slugify }}/{{ post.image }}"); background-position: center;'>
-                                <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 rounded">
-                                    <div>
-                                        {%- comment -%} 
-                                            <h6 class="indigo-text">
-                                                <i class="fas fa-chart-pie"></i>
-                                                <strong> Marketing</strong>
-                                            </h6>
-                                        {%- endcomment -%}
-                                        <h3 class="font-weight-bold">
-                                            <strong>
-                                                {{ post.title | escape }}
-                                            </strong>
-                                        </h3>
-                                        <p class="pb-3">{{ post.excerpt }}</p>
-                                        <a href="{{ post.url | relative_url }}" class="btn btn-primary btn-rounded btn-md waves-effect waves-light"><i class="fas fa-clone left"></i> Ver artigo</a>
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
+{%- include head.html -%}
+
+<body>
+    <!-- app -->
+    <div class="art-app">
+
+        <!-- mobile top bar -->
+        <div class="art-mobile-top-bar"></div>
+
+        <!-- app wrapper -->
+        <div class="art-app-wrapper">
+
+            <!-- app container end -->
+            <div class="art-app-container">
+
+                {%- include profile.html -%}
+
+                <!-- content -->
+                <div class="art-content">
+
+                    <!-- curtain -->
+                    <div class="art-curtain"></div>
+
+                    <!-- top background -->
+                    <div class="art-top-bg" style="background-image: url(/assets/img/bg.jpeg);">
+                        <!-- overlay -->
+                        <div class="art-top-bg-overlay"></div>
+                        <!-- overlay end -->
+                    </div>
+                    <!-- top background end -->
+
+                    <!-- swup container -->
+                    <div class="transition-fade" id="swup">
+
+                        <!-- scroll frame -->
+                        <div id="scrollbar" class="art-scroll-frame">
+
+                            <!-- container -->
+                            <div class="container-fluid">
+
+                                <!-- row -->
+                                <div class="row p-60-0 p-lg-30-0 p-md-15-0">
+                                    <!-- col -->
+                                    <div class="col-lg-12">
+
+                                        <!-- banner -->
+                                        <div class="art-a art-banner" style="background-image: url(/assets/bg2.jpg)">
+                                            <!-- banner back -->
+                                            <div class="art-banner-back"></div>
+                                            <!-- banner dec -->
+                                            <div class="art-banner-dec"></div>
+                                            <!-- banner overlay -->
+                                            <div class="art-banner-overlay">
+                                                <!-- main title -->
+                                                <div class="art-banner-title">
+                                                    <!-- title -->
+                                                    <h1 class="mb-15">Full Stack Developer</h1>
+                                                    <!-- suptitle -->
+                                                    <div class="art-lg-text art-code mb-25">&lt;<i>code</i>&gt; Eu desenvolvo
+                                                        <span class="txt-rotate" data-period="2000"
+                                                            data-rotate='[ "seu site.", "seu aplicativo.", "sua infraestrutura web." ]'></span>&lt;/<i>code</i>&gt;
+                                                    </div>
+                                                    <!-- <div class="art-buttons-frame">
+                                                        <a href="/portfolio-3-col-masonry.html"
+                                                            class="art-btn art-btn-md"><span>Explore now</span></a>
+                                                    </div> -->
+                                                </div>
+                                                <!-- main title end -->
+                                                <!-- photo -->
+                                            </div>
+                                            <!-- banner overlay end -->
+                                        </div>
+                                        <!-- banner end -->
+
+                                    </div>
+                                    <!-- col end -->
+                                </div>
+                                <!-- row end -->
+
+                            </div>
+                            <!-- container end -->
+
+                            <!-- container -->
+                            <div class="container-fluid">
+
+                                <!-- row -->
+                                <div class="row p-30-0">
+
+                                    <!-- col -->
+                                    <div class="col-md-4 col-6">
+
+                                        <!-- couner frame -->
+                                        <div class="art-counter-frame">
+                                            <!-- counter -->
+                                            <div class="art-counter-box">
+                                                <!-- counter number -->
+                                                <span class="art-counter-plus">+</span>
+                                                <span class="art-counter">8</span>
+                                            </div>
+                                            <!-- counter end -->
+                                            <!-- title -->
+                                            <h6>Anos de experiência</h6>
+                                        </div>
+                                        <!-- couner frame end -->
+
+                                    </div>
+                                    <!-- col end -->
+
+                                    <!-- col -->
+                                    <div class="col-md-4 col-6">
+
+                                        <!-- couner frame -->
+                                        <div class="art-counter-frame">
+                                            <!-- counter -->
+                                            <div class="art-counter-box">
+                                                <!-- counter number -->
+                                                <span class="art-counter-plus">+</span>
+                                                <span class="art-counter">50</span>
+                                            </div>
+                                            <!-- counter end -->
+                                            <!-- title -->
+                                            <h6>Projetos terminados</h6>
+                                        </div>
+                                        <!-- couner frame end -->
+
+                                    </div>
+                                    <!-- col end -->
+
+                                    <!-- col -->
+                                    <div class="col-md-4 col-12">
+
+                                        <!-- couner frame -->
+                                        <div class="art-counter-frame">
+                                            <!-- counter -->
+                                            <div class="art-counter-box">
+                                                <!-- counter number -->
+                                                <span class="art-counter">1000</span>
+                                                <span class="art-counter-plus" style="padding-right: 10px;">+</span>
+                                            </div>
+                                            <!-- counter end -->
+                                            <!-- title -->
+                                            <h6> Bugs corrigidos</h6>
+                                        </div>
+                                        <!-- couner frame end -->
+
+                                    </div>
+                                    <!-- col end -->
+
+                                </div>
+                                <!-- row end -->
+
+                            </div>
+                            <!-- container end -->
+                            <div class="container-fluid">
+                                <div class="art-ls-divider"></div>
+                            </div>
+
+                            {%- if site.posts.size > 0 -%}
+                            <!-- container -->
+                            <div class="container-fluid">
+
+                                <!-- row -->
+                                <div class="row p-30-0">
+
+                                    <!-- col -->
+                                    <div class="col-lg-12">
+
+                                        <!-- section title -->
+                                        <div class="art-section-title">
+                                        <!-- title frame -->
+                                        <div class="art-title-frame">
+                                            <!-- title -->
+                                            <a href="/blog"><h4>Artigos</h4></a>
+                                        </div>
+                                        <!-- title frame end -->
+                                        </div>
+                                        <!-- section title end -->
+
+                                    </div>
+                                    <!-- col end -->
+
+                                    {%- for post in site.posts limit:site.limit_article_home -%}
+                                    <!-- col -->
+                                    <div class="col-lg-4">
+                                        <!-- blog post card -->
+                                        <div class="art-a art-blog-card">
+                                        <!-- post cover -->
+                                        <a href="{{ post.url | relative_url }}" class="art-port-cover">
+                                            <!-- img -->
+                                            <img src="{{ site.baseurl }}/assets/images/{{ post.title | slugify }}/{{ post.image }}" alt="blog post">
+                                        </a>
+                                        <!-- post cover end -->
+                                        <!-- post description -->
+                                        <div class="art-post-description">
+                                            <!-- title -->
+                                            <a href="{{ post.url | relative_url }}">
+                                            <h5 class="mb-15">{{ post.title | escape }}</h5>
+                                            </a>
+                                            <!-- text -->
+                                            <div class="mb-15">{{ post.excerpt }}</div>
+                                            <!-- link -->
+                                            <a href="{{ post.url | relative_url }}" class="art-link art-color-link art-w-chevron">Ver artigo</a>
+                                        </div>
+                                        <!-- post description end -->
+                                        </div>
+                                        <!-- blog post card end -->
+
+                                    </div>
+                                    <!-- col end -->
+                                    {%- endfor -%}
+                                    
+
+                                </div>
+                                <!-- row end -->
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="art-a art-pagination">
+                                            <a href="/blog" class="art-link art-color-link art-w-chevron">Ver todos os artigos</a>
+                                        </div>
                                     </div>
                                 </div>
+
+
                             </div>
+                            <!-- container end -->
+                            {%- endif -%}
+
+                            <!-- container -->
+                            <div class="container-fluid" style="display: none;">
+
+                                <!-- row -->
+                                <div class="row">
+
+                                    <!-- col -->
+                                    <div class="col-lg-12">
+
+                                        <!-- section title -->
+                                        <div class="art-section-title">
+                                            <!-- title frame -->
+                                            <div class="art-title-frame">
+                                                <!-- title -->
+                                                <h4>Recommendations</h4>
+                                            </div>
+                                            <!-- title frame end -->
+                                        </div>
+                                        <!-- section title end -->
+
+                                    </div>
+                                    <!-- col end -->
+
+                                    <!-- col -->
+                                    <div class="col-lg-12">
+                                        <!-- slider container -->
+                                        <div class="swiper-container art-testimonial-slider" style="overflow: visible">
+                                            <!-- slider wrapper -->
+                                            <div class="swiper-wrapper">
+                                                <!-- slide -->
+                                                <div class="swiper-slide">
+
+                                                    <!-- testimonial -->
+                                                    <div class="art-a art-testimonial">
+                                                        <!-- testimonial body -->
+                                                        <div class="testimonial-body">
+                                                            <!-- photo -->
+                                                            <img class="art-testimonial-face"
+                                                                src="/assets/img/testimonials/face-1.jpg" alt="face">
+                                                            <!-- name -->
+                                                            <h5>Paul Trueman</h5>
+                                                            <div class="art-el-suptitle mb-15">Template author</div>
+                                                            <!-- text -->
+                                                            <div class="mb-15">Working with Artur has been a pleasure.
+                                                                Better yet - I alerted them of a minor issue before
+                                                                going to sleep. The issue was fixed the next morning. I
+                                                                couldn't ask for better support. Thank you Artur!
+                                                                This is easily a 5 star freelancer.</div>
+                                                        </div>
+                                                        <!-- testimonial body end -->
+                                                        <!-- testimonial footer -->
+                                                        <div class="art-testimonial-footer">
+                                                            <div class="art-left-side">
+                                                                <!-- star rate -->
+                                                                <ul class="art-star-rate">
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                </ul>
+                                                                <!-- star rate end -->
+                                                            </div>
+                                                            <div class="art-right-side">
+
+                                                            </div>
+                                                        </div>
+                                                        <!-- testimonial footer end -->
+                                                    </div>
+                                                    <!-- testimonial end -->
+
+                                                </div>
+                                                <!-- slide end -->
+
+                                                <!-- slide -->
+                                                <div class="swiper-slide">
+
+                                                    <!-- testimonial -->
+                                                    <div class="art-a art-testimonial">
+                                                        <!-- testimonial body -->
+                                                        <div class="testimonial-body">
+                                                            <!-- photo -->
+                                                            <img class="art-testimonial-face"
+                                                                src="/assets/img/testimonials/face-2.jpg" alt="face">
+                                                            <!-- name -->
+                                                            <h5>Paul Trueman</h5>
+                                                            <div class="art-el-suptitle mb-15">Template author</div>
+                                                            <!-- text -->
+                                                            <div class="mb-15">Working with Artur has been a pleasure.
+                                                                Better yet - I alerted them of a minor issue before
+                                                                going to sleep. The issue was fixed the next morning. I
+                                                                couldn't ask for better support. Thank you Artur!
+                                                                This is easily a 5 star freelancer.</div>
+                                                        </div>
+                                                        <!-- testimonial body end -->
+                                                        <!-- testimonial footer -->
+                                                        <div class="art-testimonial-footer">
+                                                            <div class="art-left-side">
+                                                                <!-- star rate -->
+                                                                <ul class="art-star-rate">
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li class="art-empty-item"><i
+                                                                            class="fas fa-star"></i></li>
+                                                                </ul>
+                                                                <!-- star rate end -->
+                                                            </div>
+                                                            <div class="art-right-side">
+
+                                                            </div>
+                                                        </div>
+                                                        <!-- testimonial footer end -->
+                                                    </div>
+                                                    <!-- testimonial end -->
+
+                                                </div>
+                                                <!-- slide end -->
+
+                                                <!-- slide -->
+                                                <div class="swiper-slide">
+
+                                                    <!-- testimonial -->
+                                                    <div class="art-a art-testimonial">
+                                                        <!-- testimonial body -->
+                                                        <div class="testimonial-body">
+                                                            <!-- photo -->
+                                                            <img class="art-testimonial-face"
+                                                                src="/assets/img/testimonials/face-3.jpg" alt="face">
+                                                            <!-- name -->
+                                                            <h5>Paul Trueman</h5>
+                                                            <div class="art-el-suptitle mb-15">Template author</div>
+                                                            <!-- text -->
+                                                            <div class="mb-15">Working with Artur has been a pleasure.
+                                                                Better yet - I alerted them of a minor issue before
+                                                                going to sleep. The issue was fixed the next morning. I
+                                                                couldn't ask for better support. Thank you Artur!
+                                                                This is easily a 5 star freelancer.</div>
+                                                        </div>
+                                                        <!-- testimonial body end -->
+                                                        <!-- testimonial footer -->
+                                                        <div class="art-testimonial-footer">
+                                                            <div class="art-left-side">
+                                                                <!-- star rate -->
+                                                                <ul class="art-star-rate">
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                </ul>
+                                                                <!-- star rate end -->
+                                                            </div>
+                                                            <div class="art-right-side">
+
+                                                            </div>
+                                                        </div>
+                                                        <!-- testimonial footer end -->
+                                                    </div>
+                                                    <!-- testimonial end -->
+
+                                                </div>
+                                                <!-- slide end -->
+
+                                                <!-- slide -->
+                                                <div class="swiper-slide">
+
+                                                    <!-- testimonial -->
+                                                    <div class="art-a art-testimonial">
+                                                        <!-- testimonial body -->
+                                                        <div class="testimonial-body">
+                                                            <!-- photo -->
+                                                            <img class="art-testimonial-face"
+                                                                src="/assets/img/testimonials/face-4.jpg" alt="face">
+                                                            <!-- name -->
+                                                            <h5>Paul Trueman</h5>
+                                                            <div class="art-el-suptitle mb-15">Template author</div>
+                                                            <!-- text -->
+                                                            <div class="mb-15">Working with Artur has been a pleasure.
+                                                                Better yet - I alerted them of a minor issue before
+                                                                going to sleep. The issue was fixed the next morning. I
+                                                                couldn't ask for better support. Thank you Artur!
+                                                                This is easily a 5 star freelancer.</div>
+                                                        </div>
+                                                        <!-- testimonial body end -->
+                                                        <!-- testimonial footer -->
+                                                        <div class="art-testimonial-footer">
+                                                            <div class="art-left-side">
+                                                                <!-- star rate -->
+                                                                <ul class="art-star-rate">
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                    <li><i class="fas fa-star"></i></li>
+                                                                </ul>
+                                                                <!-- star rate end -->
+                                                            </div>
+                                                            <div class="art-right-side">
+
+                                                            </div>
+                                                        </div>
+                                                        <!-- testimonial footer end -->
+                                                    </div>
+                                                    <!-- testimonial end -->
+
+                                                </div>
+                                                <!-- slide end -->
+
+                                            </div>
+                                            <!-- slider wrapper end -->
+                                        </div>
+                                        <!-- slider container end -->
+
+                                    </div>
+                                    <!-- col end -->
+
+                                    <!-- col -->
+                                    <div class="col-lg-12">
+
+                                        <!-- slider navigation -->
+                                        <div class="art-slider-navigation">
+
+                                            <!-- left side -->
+                                            <div class="art-sn-left">
+
+                                                <!-- slider pagination -->
+                                                <div class="swiper-pagination"></div>
+
+                                            </div>
+                                            <!-- left side end -->
+
+                                            <!-- right side -->
+                                            <div class="art-sn-right">
+
+                                                <!-- slider navigation -->
+                                                <div class="art-slider-nav-frame">
+                                                    <!-- prev -->
+                                                    <div class="art-slider-nav art-testi-swiper-prev"><i
+                                                            class="fas fa-chevron-left"></i></div>
+                                                    <!-- next -->
+                                                    <div class="art-slider-nav art-testi-swiper-next"><i
+                                                            class="fas fa-chevron-right"></i></div>
+                                                </div>
+                                                <!-- slider navigation -->
+
+                                            </div>
+                                            <!-- right side end -->
+
+                                        </div>
+                                        <!-- slider navigation end -->
+
+                                    </div>
+                                    <!-- col end -->
+
+                                </div>
+                                <!-- row end -->
+
+                            </div>
+                            <!-- container end -->
+
+                            <!-- container -->
+                            <div class="container-fluid" style="margin-top: 30px;">
+                                <!-- row -->
+                                <div class="row">
+
+                                    <!-- col -->
+                                    <div class="col-6 col-lg-3">
+                                        <!-- brand -->
+                                        <img class="art-brand" src="/assets/img/linux.png" alt="brand" style="width: 150px; height: auto;">
+                                    </div>
+                                    <!-- col end -->
+
+                                    <!-- col -->
+                                    <div class="col-6 col-lg-3">
+                                        <!-- brand -->
+                                        <img class="art-brand" src="/assets/img/devops.png" alt="brand" style="width: 130px; height: auto;">
+                                    </div>
+                                    <!-- col end -->
+
+                                    <!-- col -->
+                                    <div class="col-6 col-lg-3">
+                                        <!-- brand -->
+                                        <img class="art-brand" src="/assets/img/php.png" alt="brand" style="width: 100px; height: auto;">
+                                    </div>
+                                    <!-- col end -->
+
+                                    <!-- col -->
+                                    <div class="col-6 col-lg-3">
+                                        <!-- brand -->
+                                        <img class="art-brand" src="/assets/img/vue.png" alt="brand" style="width: 80px; height: auto;">
+                                    </div>
+                                    <!-- col end -->
+
+                                </div>
+                                <!-- row end -->
+
+                            </div>
+                            <!-- container end -->
+
+                            <!-- container -->
+                            <div class="container-fluid">
+
+                                {%- include footer.html -%}
+
+                            </div>
+                            <!-- container end -->
+
                         </div>
-                    {%- endfor -%}
+                        <!-- scroll frame end -->
+
+                    </div>
+                    <!-- swup container end -->
+
                 </div>
-            {%- endif -%}
+                <!-- content end -->
+                {% include menu.html %}
+            </div>
+            <!-- app container end -->
+
         </div>
-        {%- include footer.html -%}
-    </body>
+        <!-- app wrapper end -->
+
+        <!-- preloader -->
+        <div class="art-preloader">
+            <div class="art-preloader-content">
+                <h4>Alessandro de Azevedo</h4>
+                <div id="preloader" class="art-preloader-load"></div>
+            </div>
+        </div>
+        <!-- preloader end -->
+
+    </div>
+    <!-- app end -->
+
+    {% include scripts.html %}
+
+</body>
+
 </html>

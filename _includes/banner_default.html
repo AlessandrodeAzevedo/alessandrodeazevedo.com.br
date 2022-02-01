@@ -1,14 +1,48 @@
+{% if page.image %}
 <div class="banner-default mb-2">
     <div class="container white-text pt-3 pt-md-4">
-        <div class="row">
-            <div class="col-md-2">
-                <div style="position:absolute;">
-                    <img src="{{ site.baseurl }}/assets/eu.jpg" class="img-fluid rounded z-depth-1 d-none d-md-block">
+        <!-- col -->
+        <div class="col-lg-12">
+
+            <!-- section title -->
+            <div class="art-section-title">
+              <!-- title frame -->
+              <div class="art-title-frame">
+                <!-- title -->
+                <h4>{{ page.title }}</h4>
+              </div>
+              <!-- title frame end -->
+              <!-- right frame -->
+              <div class="art-right-frame">
+                <div class="art-project-category">
+                    {{ page.tags | join:", "}}
                 </div>
+              </div>
+              <!-- right frame end -->
             </div>
-            <div class="col-md-10 text-center pt-4">
-                    <h1 class="h1-responsive font-weight-bold" itemprop="name headline">{{ page.title | escape }}</h1>
+            <!-- section title end -->
+
+          </div>
+          <!-- col end -->
+
+          <!-- col -->
+          <div class="col-lg-12">
+
+            <!-- project cover -->
+            <div class="art-a art-project-cover">
+              <!-- item frame -->
+              <a data-fancybox="gallery" href="/assets/images/{{ page.slug }}/{{ page.image }}" class="art-portfolio-item-frame art-horizontal">
+                <!-- img -->
+                <img src="/assets/images/{{ page.slug }}/{{ page.image }}" alt="item">
+                <!-- zoom icon -->
+                <span class="art-item-hover"><i class="fas fa-expand"></i></span>
+              </a>
+              <!-- item end -->
             </div>
-        </div>
+            <!-- project cover nd -->
+
+          </div>
+          <!-- col end -->
     </div>
 </div>
+{% endif %}
